@@ -1,11 +1,38 @@
 <!doctype html>
 <html>
 <head>
-    <title>Skills-HTML-CSS</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Job Application</title>
 </head>
 <body>
-
-<!-- your html goes here -->
-
+    <form action="/success" method="POST" class="basic-grey">
+        <h1>Job Interest
+            <span>Please provide your name and desired salary, as well as selecting the position to which you are applying before submitting this form.</span>
+        </h1>
+        <label>
+            <span>First Name : </span>
+            <input type="text" name="firstname">
+        </label>
+        <label>
+            <span>Last Name : </span>
+            <input type="text" name="lastname" id="field-lastname">
+        </label>
+        <label>
+            <span>Salary Requirement : </span>
+            <input type="text" name="salary" id="field-salary">
+        </label>
+        <label>
+            <span>Job Title : </span>
+            <select name="selection">
+                <option value="software-engineer" title="Software Engineer">Software Engineer</option>
+                <option value="qa-engineer" title="QA Engineer">QA Engineer</option>
+                <option value="product-manager" title="Product Manager">Product Manager</option>
+            </select>
+        </label>
+        <label>
+            <span>&nbsp;</span> 
+            <input type="button" class="button" value="Submit">
+        </label>
+    </form>
 </body>
 </html>
