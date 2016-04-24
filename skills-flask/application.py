@@ -10,10 +10,10 @@ def index_page():
     return render_template("index.html")
 
 
-@app.route('/application-form', methods=["POST"])
-def application_form():4
+@app.route('/application-form', methods=["GET"])
+def application_form():
 
-    return render_template("application-form.html", first_name="firstname", last_name="lastname", min_salary="salary", job_title="selection")
+    return render_template("application-form.html")
 
 
 @app.route('/application', methods=["GET"])
