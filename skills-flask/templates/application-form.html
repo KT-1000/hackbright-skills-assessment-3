@@ -1,13 +1,35 @@
-<!doctype html>
-<html>
-<head>
-    <title>Skills-Web</title>
-    <link rel="stylesheet" href="/static/styles.css">
-</head>
-<body>
+{% extends 'base.html' %}
 
-<!-- This page needs a form that can capture data about the user's
-first name, last name, job title, and salary requirements. -->
+{% block title %}Job Interest Form{% endblock %}
 
-</body>
-</html>
+{% block body %}
+    <form action="/application-form" method="POST" class="basic-grey">
+        <h1>Job Interest
+            <span>Please provide your name and desired salary, as well as selecting the position to which you are applying before submitting this form.</span>
+        </h1>
+        <label>
+            <span>First Name : </span>
+            <input type="text" name="firstname">
+        </label>
+        <label>
+            <span>Last Name : </span>
+            <input type="text" name="lastname" id="field-lastname">
+        </label>
+        <label>
+            <span>Salary Requirement : </span>
+            <input type="text" name="salary">
+        </label>
+        <label>
+            <span>Job Title : </span>
+            <select name="selection">
+                <option value="software-engineer" title="Software Engineer">Software Engineer</option>
+                <option value="qa-engineer" title="QA Engineer">QA Engineer</option>
+                <option value="product-manager" title="Product Manager">Product Manager</option>
+            </select>
+        </label>
+        <label>
+            <span>&nbsp;</span> 
+            <input type="button" class="button" value="Submit">
+        </label>
+    </form>
+{% endblock %}
