@@ -1,4 +1,5 @@
-/* Basic Grey */
+
+/* modified from http://www.sanwebe.com/2013/10/css-html-form-styles */
 .basic-grey {
     margin-left:auto;
     margin-right:auto;
@@ -51,9 +52,9 @@
     -moz-box-shadow: inset 0px 1px 4px #ECECEC;
     -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
 }
-.basic-grey select {
-    background: #FFF url('down-arrow.png') no-repeat right;
-    background: #FFF url('down-arrow.png') no-repeat right);
+.basic-grey select option{
+    background: #FFFFCC url('down-arrow.png') no-repeat right;
+    background: #FFFFCC url('down-arrow.png') no-repeat right);
     appearance:none;
     -webkit-appearance:none; 
     -moz-appearance: none;
@@ -76,4 +77,8 @@
 .basic-grey .button:hover {
     color: #333;
     background-color: #EBEBEB;
+}
+
+#field-lastname {
+    font-weight: bold;
 }
