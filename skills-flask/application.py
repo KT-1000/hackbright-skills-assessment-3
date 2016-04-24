@@ -22,13 +22,13 @@ def application():
     first_name = request.form.get("firstname")
     last_name = request.form.get("lastname")
     salary = request.form.get("salary")
-    position = request.form.get("position")
+    selection = request.form.get("selection")
 
     return render_template("application-response.html",
                             first_name=first_name,
                             last_name=last_name,
                             salary=salary,
-                            position=position)
+                            selection=selection)
 
 if __name__ == "__main__":
     app.run(debug=True)
