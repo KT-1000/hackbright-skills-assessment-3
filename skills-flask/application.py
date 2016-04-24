@@ -16,15 +16,19 @@ def application_form():
     return render_template("application-form.html")
 
 
-@app.route('/application', methods=["GET"])
+@app.route('/application', methods=["POST"])
 def application():
 
-    request.form.get("firstname")
-    request.form.get("lastname")
-    request.form.get("salary")
-    request.form.get("position")
+    first_name = request.form.get("firstname")
+    last_name = request.form.get("lastname")
+    salary = request.form.get("salary")
+    position = request.form.get("position")
 
-    return render_template("application-response.html")
+    return render_template("application-response.html",
+                            first_name=first_name,
+                            last_name=last_name,
+                            salary=salary,
+                            position=position)
 
 if __name__ == "__main__":
     app.run(debug=True)
