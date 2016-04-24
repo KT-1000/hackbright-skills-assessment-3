@@ -11,14 +11,9 @@ def index_page():
 
 
 @app.route('/application-form', methods=["POST"])
-def application_form():
+def application_form():4
 
-    first_name = request.form.get("firstname")
-    last_name = request.form.get("lastname")
-    min_salary = request.form.get("salary")
-    job_title = request.form.get("position")
-
-    return render_template("application_form.html", first_name="firstname", last_name="lastname", min_salary="salary", job_title="selection")
+    return render_template("application-form.html", first_name="firstname", last_name="lastname", min_salary="salary", job_title="selection")
 
 
 @app.route('/application', methods=["GET"])
@@ -29,7 +24,7 @@ def application():
     request.form.get("salary")
     request.form.get("position")
 
-    return render_template("application_response.html")
+    return render_template("application-response.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
